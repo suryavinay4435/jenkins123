@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     tools {
-	maven 'maven'
+	maven 'apache-maven-3.9.4'
       
     }
 
     stages {
         stage('code clone') {
             steps {
-			git credentialsId: 'github', url: 'https://github.com/kartikeyapro/ks.git'
+			git credentialsId: 'github', url: 'https://github.com/suryavinay4435/new-jenkins.git'
                 
             }
             }
@@ -40,6 +40,12 @@ pipeline {
 			stage('code package') {
             steps {
 			sh 'mvn package'
+                
+            }
+            }
+			stage('code deploy') {
+            steps {
+			  sh 'mvn deploy'
                 
             }
             }
