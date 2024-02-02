@@ -10,7 +10,6 @@ pipeline {
         stage('code clone') {
             steps {
 			git credentialsId: 'github', url: 'https://github.com/suryavinay4435/new-jenkins.git'
-                
             }
             }
 			stage('code clean') {
