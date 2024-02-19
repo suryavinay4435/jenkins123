@@ -24,6 +24,12 @@ pipeline {
                 
             }
             }
+			stage('sonar scan') {
+            steps {
+			sh 'mvn sonar:sonar -Dsonar.projectKey=New -Dsonar.host.url=http://15.207.115.106:9000 -Dsonar.login=dfa8c5b3fa12d7fbfce59f0066c47b4d563aa497'   
+            }
+            }
+			
 			stage('code compile') {
             steps {
 			sh 'mvn compile'
