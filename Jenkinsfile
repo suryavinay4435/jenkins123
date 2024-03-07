@@ -24,11 +24,11 @@ pipeline {
                 
             }
             }
-			stage('sonar scan') {
+			/*stage('sonar scan') {
             steps { 
             sh 'mvn sonar:sonar -Dsonar.projectKey=webproject -Dsonar.host.url=http://13.232.101.61:9000 -Dsonar.login=4706196c3b563c7db98f41717d6f82a937cbb44d'			
             }
-            }
+            }*/
 			
 			stage('code compile') {
             steps {
