@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-	maven 'apache-maven-3.9.4'
+	maven 'apache-maven-3.9.9'
       
     }
 
@@ -24,11 +24,11 @@ pipeline {
                 
             }
             }
-			/*stage('sonar scan') {
+			stage('sonar scan') {
             steps { 
-            sh 'mvn sonar:sonar -Dsonar.projectKey=webproject -Dsonar.host.url=http://13.232.101.61:9000 -Dsonar.login=4706196c3b563c7db98f41717d6f82a937cbb44d'			
+            sh 'mvn sonar:sonar -Dsonar.host.url=http://13.201.59.55:9000 -Dsonar.login=a4df5dede22c1f8c9573d2789ca3b5e53f21c280'			
             }
-            }*/
+            }
 			
 			stage('code compile') {
             steps {
