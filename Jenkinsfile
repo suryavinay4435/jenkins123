@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-	maven 'apache-maven-3.8.8'
+	maven 'apache-maven-3.9.9'
       
     }
 
@@ -26,7 +26,7 @@ pipeline {
             }
 			stage('sonar scan') {
             steps { 
-            sh 'mvn sonar:sonar -Dsonar.projectKey=demoproject -Dsonar.host.url=http://13.201.59.55:9000 -Dsonar.login=6dc899be52a8223d42ddc6c4d6ec58e4baac2d71'			
+            sh 'mvn sonar:sonar -Dsonar.host.url=http://3.6.92.124:9000 -Dsonar.login=88080a42e1cefe3eb289103d6487a895cd03a7c5'			
             }
             }
 			
