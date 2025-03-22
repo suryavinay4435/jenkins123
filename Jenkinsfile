@@ -54,16 +54,7 @@ pipeline {
 
         stage('code deploy') {
             steps {
-                script {
-                    // Ensure the correct path to settings.xml or use default one
-                    def status = sh(script: 'mvn deploy', returnStatus: true)
-                    
-                    // If you need a specific settings.xml, provide its path here:
-                    // def status = sh(script: 'mvn -s /path/to/settings.xml deploy', returnStatus: true)
-
-                    if (status != 0) {
-                        error "Deployment failed!"
-                    }
+                sh 'mvn deploy'
                 }
             }
         }
