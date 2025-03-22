@@ -54,8 +54,6 @@ pipeline {
             }
 			stage('code deploy') {
             steps {
-		    
-	 	    withEnv(["MAVEN_OPTS=-s /path/to/your/settings.xml"]) {
     			sh 'mvn deploy'
 		    }
 
