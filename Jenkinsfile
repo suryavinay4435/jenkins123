@@ -26,7 +26,7 @@ pipeline {
             }
 			stage('sonar scan') {
             steps { 
-            sh 'mvn sonar:sonar -Dsonar.projectKey=VinayProjectWeb -Dsonar.host.url=http://13.60.93.108:9000 -Dsonar.login=d2231ee1db7adf6ba147813d368fa6b6cde95035'			
+            sh 'mvn sonar:sonar -Dsonar.host.url=http://65.0.100.234:9000 -Dsonar.login=6a7ebf4d06d9b57c7cd4bd0759ea014875e12e2d'			
             }
             }
 			
